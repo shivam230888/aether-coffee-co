@@ -37,14 +37,14 @@ export function Navbar() {
 
         {/* Desktop Nav */}
         <nav className="hidden md:flex items-center gap-8">
-          {["Menu", "Products", "Story", "Locations"].map((item) => (
+          {[["Menu", "menu"], ["Products", "products"], ["Story", "story"], ["Locations", "locations"], ["Reserve", "reserve"]].map(([label, id]) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-sm tracking-wider uppercase text-foreground/80 hover:text-primary transition-colors"
-              data-testid={`link-nav-${item.toLowerCase()}`}
+              key={id}
+              href={`#${id}`}
+              className={`text-sm tracking-wider uppercase transition-colors ${id === "reserve" ? "text-primary hover:text-primary/80 font-semibold" : "text-foreground/80 hover:text-primary"}`}
+              data-testid={`link-nav-${id}`}
             >
-              {item}
+              {label}
             </a>
           ))}
         </nav>
@@ -73,15 +73,15 @@ export function Navbar() {
           className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-xl border-b border-border p-6 flex flex-col gap-6 md:hidden"
           data-testid="mobile-menu-container"
         >
-          {["Menu", "Products", "Story", "Locations"].map((item) => (
+          {[["Menu", "menu"], ["Products", "products"], ["Story", "story"], ["Locations", "locations"], ["Reserve", "reserve"]].map(([label, id]) => (
             <a
-              key={item}
-              href={`#${item.toLowerCase()}`}
-              className="text-lg tracking-wider uppercase text-foreground/80 hover:text-primary transition-colors"
+              key={id}
+              href={`#${id}`}
+              className={`text-lg tracking-wider uppercase transition-colors ${id === "reserve" ? "text-primary font-semibold" : "text-foreground/80 hover:text-primary"}`}
               onClick={() => setMobileMenuOpen(false)}
-              data-testid={`link-mobile-nav-${item.toLowerCase()}`}
+              data-testid={`link-mobile-nav-${id}`}
             >
-              {item}
+              {label}
             </a>
           ))}
           <Button variant="default" className="bg-primary text-primary-foreground font-serif w-full mt-4" data-testid="button-mobile-order">

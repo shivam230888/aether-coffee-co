@@ -11,6 +11,7 @@ import { OrderCTA } from "@/components/sections/OrderCTA";
 import { Loyalty } from "@/components/sections/Loyalty";
 import { Newsletter } from "@/components/sections/Newsletter";
 import { Contact } from "@/components/sections/Contact";
+import { Reservation } from "@/components/sections/Reservation";
 import { Footer } from "@/components/sections/Footer";
 
 export default function Home() {
@@ -29,6 +30,7 @@ export default function Home() {
         <OrderCTA />
         <Loyalty />
         <Newsletter />
+        <Reservation />
         <Contact />
       </main>
       <Footer />
