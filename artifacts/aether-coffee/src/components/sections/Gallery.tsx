@@ -1,14 +1,18 @@
 import { motion } from "framer-motion";
-import coffeeCupPath from "@assets/gemini-2.5-flash-image_Create_an_ultra-realistic_premium_takea_1778669477965.jpg";
-import storefrontPath from "@assets/gemini-2.5-flash-image_Seedance_is_a_strong_choice_for_cinemat_1778669477966.jpg";
+import img1 from "@assets/pomelli_photoshoot_image_9_16_0514_(1)_1778752369872.png";
+import img2 from "@assets/pomelli_photoshoot_image_9_16_0514_(2)_1778752369871.png";
+import img3 from "@assets/pomelli_photoshoot_image_9_16_0514_(3)_1778752369869.png";
+import img4 from "@assets/pomelli_photoshoot_image_9_16_0514_1778752369872.png";
+import img5 from "@assets/pomelli_photoshoot-2_1778752854073.png";
+import img6 from "@assets/pomelli_photoshoot-4_1778752854074.png";
 
 const GALLERY_ITEMS = [
-  { id: "g1", src: coffeeCupPath, alt: "AETHER cup on wooden table", span: "col-span-1 row-span-2" },
-  { id: "g2", src: storefrontPath, alt: "AETHER storefront interior", span: "col-span-2 row-span-1" },
-  { id: "g3", src: coffeeCupPath, alt: "Close up of Aether Black", span: "col-span-1 row-span-1" },
-  { id: "g4", src: storefrontPath, alt: "Barista crafting a cortado", span: "col-span-1 row-span-1" },
-  { id: "g5", src: coffeeCupPath, alt: "Gold spoon and coffee beans", span: "col-span-1 row-span-1" },
-  { id: "g6", src: storefrontPath, alt: "The AETHER bar at dusk", span: "col-span-2 row-span-1" },
+  { id: "g1", src: img1, alt: "Guests enjoying Aether Coffee inside the café", span: "col-span-1 row-span-2" },
+  { id: "g2", src: img2, alt: "Couple at AETHER modern café exterior", span: "col-span-2 row-span-1" },
+  { id: "g3", src: img5, alt: "Aether Black — signature blend with coffee beans", span: "col-span-1 row-span-1" },
+  { id: "g4", src: img3, alt: "Morning ritual at AETHER Coffee Co.", span: "col-span-1 row-span-1" },
+  { id: "g5", src: img6, alt: "AETHER cup in hand — precision crafted", span: "col-span-1 row-span-1" },
+  { id: "g6", src: img4, alt: "The AETHER experience — quiet focus", span: "col-span-2 row-span-1" },
 ];
 
 export function Gallery() {
@@ -53,7 +57,7 @@ export function Gallery() {
               <img
                 src={item.src}
                 alt={item.alt}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-primary/0 group-hover:bg-primary/10 transition-colors duration-300" />
             </motion.div>

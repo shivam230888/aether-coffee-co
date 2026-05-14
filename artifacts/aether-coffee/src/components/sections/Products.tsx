@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
-import coffeeCupPath from "@assets/gemini-2.5-flash-image_Create_an_ultra-realistic_premium_takea_1778669477965.jpg";
+import cupCleanPath from "@assets/pomelli_photoshoot-1_1778752854072.png";
+import cupDarkPath from "@assets/pomelli_photoshoot-2_1778752854073.png";
+import cupOfficePath from "@assets/pomelli_photoshoot-3_1778752854073.png";
 
 const PRODUCTS = [
   {
@@ -10,6 +12,7 @@ const PRODUCTS = [
     weight: "250g / 500g",
     price: "$28",
     tag: "Best Seller",
+    img: cupCleanPath,
   },
   {
     id: "p2",
@@ -19,6 +22,7 @@ const PRODUCTS = [
     weight: "250g / 500g",
     price: "$34",
     tag: "Reserve",
+    img: cupDarkPath,
   },
   {
     id: "p3",
@@ -28,6 +32,7 @@ const PRODUCTS = [
     weight: "Complete Kit",
     price: "$89",
     tag: "Limited",
+    img: cupOfficePath,
   },
 ];
 
@@ -64,11 +69,11 @@ export function Products() {
               data-testid={`card-product-${product.id}`}
               className="group relative"
             >
-              <div className="relative overflow-hidden mb-6 aspect-[4/3]">
+              <div className="relative overflow-hidden mb-6 aspect-[3/4]">
                 <img
-                  src={coffeeCupPath}
+                  src={product.img}
                   alt={product.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                   data-testid={`img-product-${product.id}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent" />
