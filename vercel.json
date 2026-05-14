@@ -1,8 +1,5 @@
 {
   "version": 2,
-  "buildCommand": "cd artifacts/aether-coffee && cp package.vercel.json package.json && npm install && npm run build:vercel",
-  "outputDirectory": "artifacts/aether-coffee/dist",
-  "framework": null,
   "rewrites": [
     { "source": "/(.*)", "destination": "/index.html" }
   ]
